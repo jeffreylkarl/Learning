@@ -630,6 +630,18 @@ body {
     z-index: 2000;
     box-shadow: 0 1rem 3rem oklch(var(--color-black) / 0.1);
     cursor: pointer;
+
+    @media (max-width: 56.25em) {
+        /* width < 900? */
+        top: 4rem;
+        right: 4rem;
+    }
+
+    @media (max-width: 37.5em) {
+        /* width < 600? */
+        top: 3rem;
+        right: 3rem;
+    }
 }
 
 .navigation__bg {
@@ -646,7 +658,17 @@ body {
     z-index: 1000;
     transition: all 0.8s cubic-bezier(0.6, 0.01, 0.36, 1.25);
 
-    /* transform: scale(80); */
+    @media (max-width: 56.25em) {
+        /* width < 900? */
+        top: 4.5rem;
+        right: 4.5rem;
+    }
+
+    @media (max-width: 37.5em) {
+        /* width < 600? */
+        top: 3.5rem;
+        right: 3.5rem;
+    }
 }
 
 .navigation__nav {
@@ -881,6 +903,11 @@ body {
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
+
+    @media (max-width: 37.5em) {
+        /* width < 600? */
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
 }
 
 .header__logo {
@@ -981,6 +1008,13 @@ body {
             margin-bottom: var(--gutter-vert-small);
         }
     }
+
+    /* Tablet Vertical */
+    @media (max-width: 56.25em) {
+        /* width < 900? */
+        max-width: 50rem;
+        padding: 0 3rem;
+    }
 }
 
 [class^="row__col"] {
@@ -993,6 +1027,7 @@ body {
         @media (max-width: 56.25em) {
             /* width < 900? */
             margin-right: 0;
+            margin-bottom: var(--gutter-vert-small);
         }
     }
 
@@ -1132,13 +1167,16 @@ body {
 }
 
 .footer {
-    /* display: inline-block;
-    height: auto;
-    width: 100%; */
     background-color: oklch(var(--color-grey-dark-3));
     color: oklch(var(--color-grey-light-1));
     padding: 10rem 0;
     font-size: 1.4rem;
+
+    /* Tablet Vertical */
+    @media (max-width: 56.25em) {
+        /* width < 900? */
+        padding: 8rem 0;
+    }
 }
 
 .footer__logo-box {
@@ -1155,6 +1193,13 @@ body {
     border-top: 1px solid oklch(var(--color-grey-dark-1));
     padding-top: 2rem;
     display: inline-block;
+
+    /* Tablet Vertical */
+    @media (max-width: 56.25em) {
+        /* width < 900? */
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .footer__list {
@@ -1197,6 +1242,13 @@ body {
     display: inline-block;
     width: 80%;
     float: right;
+
+    /* Tablet Vertical */
+    @media (max-width: 56.25em) {
+        /* width < 900? */
+        width: 100%;
+        float: none;
+    }
 }
 
 /* `6 =================== UTILITIES =================== */
